@@ -1,0 +1,27 @@
+.numberRow {
+    div {
+        display: inline-block;
+        width: 100px;
+    }
+    .columnHeader {
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+    }
+}
+
+.letterRow {
+    div {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        position: relative;
+    }
+    .text {
+        position: absolute;
+        left: 30%;
+        top: 50%;
+        font-size: 32px;
+        font-weight: bold;
+    }
+}

@@ -3,10 +3,10 @@ pacBioTestProject.directive('circle', ['d3Service', function (d3Service) {
         restrict: 'EA',
         scope: {},
         link: function (scope, element, attrs) {
-            console.log(element);
             d3Service.d3().then(function (d3) {
+            //console.log(element[0]);
                 //Make an SVG Container
-                var svgContainer = d3.select("element[0]").append("svg")
+                var svgContainer = d3.select("circle").append("svg")
                     .attr("width", 80)
                     .attr("height", 80);
 

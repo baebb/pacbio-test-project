@@ -6,41 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Set the base path for angular routing -->
+    <!-- By default, AngularJS will route URLs with a hash tag. For example, Angular will have http://example.com/,
+    http://example.com/#/about, and http://example.com/#/contact. -->
+    <base href="/">
+
     <!-- vendor css -->
     <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css">
 
-    <!-- vendor js -->
-    <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<!--    <script type="text/javascript" src="/bower_components/d3/d3.js"></script>-->
-    
     <!-- css compiled from assets/scss/ -->
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
-    
-    <!-- app -->
-    <script type="text/javascript" src="/app/app.js"></script>
-    
-    <script type="text/javascript" src="/app/services/d3Service.js"></script>
-    <script type="text/javascript" src="/app/services/data.js"></script>
-
-    <!-- views -->
-    <script type="text/javascript" src="/app/views/main/main-controller.js"></script>
-
-    <!-- directives -->
-    <script type="text/livescript" src="/app/directives/d3directive.js"></script>
-    
 </head>
 
 <body ng-app="pacBioTestProject">
-
     <div id="app">
-        <div id="wrapper" class="page-container">
-            <div ui-view="content"></div>
-        </div>
+        <div ui-view="content"></div>
     </div>
 
+    <!-- JS -->
+
+    <!-- load vendor libs -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!--    <script type="text/javascript" src="/bower_components/d3/d3.js"></script>-->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+
+    <!-- controllers -->
+    <script src="/app/controllers/mainCtrl.js"></script>
+
+    <!-- services -->
+    <!--    <script src="/app/services/d3Service.js"></script>-->
+    <script src="/app/services/data.js"></script>
+
+    <!-- directives -->
+    <!--    <script src="/app/directives/d3directive.js"></script>-->
+
+    <!-- main Angular app files -->
+    <script src="/app/app.js"></script>
+    <!-- END JS -->
 </body>
 
 </html>

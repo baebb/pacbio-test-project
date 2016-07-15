@@ -1,4 +1,12 @@
+'use strict';
+
 angular.module('d3', [])
+  /**
+   * @desc 
+   * @param $document - 
+   * @param $q - return promise objects
+   * @param $rootScope - 
+   */
   .factory('d3Service', ['$document', '$q', '$rootScope',
     function($document, $q, $rootScope) {
       var d = $q.defer();

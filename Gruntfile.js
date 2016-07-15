@@ -25,7 +25,6 @@ module.exports = function (grunt) {
         }
     });
 
-    // Load the plugin that provides the "uglify" task.
     [
         'grunt-contrib-watch',
         'grunt-sass'

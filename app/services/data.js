@@ -1,1 +1,7 @@
-pacBioTestProject.factory('Data', function(ENV) {});
+'use strict';
+
+angular.module('dataService', [])
+  /**
+   * @desc 
+   */
+   .factory('Data', function(ENV) {});

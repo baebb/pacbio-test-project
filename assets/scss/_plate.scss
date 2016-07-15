@@ -11,7 +11,7 @@
 }
 
 .letterRow {
-    div {
+    .rowHeader, .cell {
         display: inline-block;
         width: 100px;
         height: 100px;
@@ -19,9 +19,17 @@
     }
     .text {
         position: absolute;
-        left: 20px;
-        top: 30px;
+        left: 30px;
+        top: 25px;
         font-size: 32px;
         font-weight: bold;
+    }
+    .customWell {
+        margin: auto;
+        width: 90px;
+        height: 90px;
+        position: relative;
+        border-radius: 50%;
+        border: 2px solid black;
     }
 }

@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="numberRow">
+            <div class="blank"></div>
+            <div class="columnHeader" ng-repeat="number in main.numbers">{{number}}</div>
+        </div>
+
+        <div class="letterRow" ng-repeat="letter in main.letters">
+            <div class="rowHeader">
+                <span class="text">{{letter}}</span>
+            </div>
+            <div class="cell" id="{{letter}}{{number}}" ng-repeat="number in main.numbers track by $index">
+                <!--
+                <div class="circleWrapper">
+                    <circle></circle>
+                </div>
+-->
+                <div class="customWell" ng-if="main.getItem(letter + number) != null" ng-style="{'background-color': main.getColor(letter, number)}" ng-click="main.clickCell(letter, number)">
+                </div>
+                
+                <div class="customWell" ng-if="!main.getItem(letter + number)" style="background-color: white;" ng-click="main.clickCell(letter, number)">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="alert bg-danger" ng-if="main.error">
+                {{ main.error }}
+            </div>
+            <div class="inputWrapper">
+                <div class="inputForm">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="wellLocation">Well Location</label>
+                            <input type="text" class="form-control" id="wellLocation" ng-model="main.wellLocation">
+                        </div>
+                        <div class="form-group">
+                            <label for="reactionTime">Reaction Time</label>
+                            <input type="text" class="form-control" id="reactionTime" ng-model="main.reactionTime">
+                        </div>
+                        <div class="form-group">
+                            <label for="sampleName">Sample Name</label>
+                            <input type="text" class="form-control" id="sampleName" ng-model="main.sampleName" ng-pattern="/^[a-zA-Z]*$/">
+                        </div>
+                        <button ng-click="main.addData()" id="addData" class="btn btn-default">Add data</button>
+                        <button ng-click="main.removeData()" id="removeData" class="btn btn-default">Remove data</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

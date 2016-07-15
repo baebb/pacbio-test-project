@@ -1,21 +1,27 @@
-var pacBioTestProject = angular.module('pacBioTestProject', [
+'use strict';
+
+angular.module('pacBioTestProject', [
     'ui.router',
-    'd3'
-]);
+    'mainCtrl',
+    'dataService',
+    'LocalStorageModule'
+    ]).config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+    $stateProvider
+    // route for the home page
+        .state('main', {
+        url: '/',
+        views: {
+            'content': {
+                templateUrl: '/app/views/pages/main.html',
+                controller: 'mainCtrl',
+                controllerAs: 'main'
+            }
+        }
+    });
 
-// Routes config
-pacBioTestProject.config(function ($stateProvider, $urlRouterProvider) {
-
+    // if route is not found
     $urlRouterProvider.otherwise('/');
 
-    $stateProvider
-        .state('main', {
-            url: '/',
-            views: {
-                'content': {
-                    templateUrl: 'app/views/main/main.html',
-                    controller: 'main-controller'
-                }
-            }
-        })
+    // set our apt our app to have pretty URLS
+    $locationProvider.html5Mode(true);
 });

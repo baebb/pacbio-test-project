@@ -1,3 +1,3 @@
-.numberRow div{display:inline-block;width:100px}.numberRow .columnHeader{text-align:center;font-size:32px;font-weight:bold}.letterRow div{display:inline-block;width:100px;height:100px;position:relative}.letterRow .text{position:absolute;left:30%;top:50%;font-size:32px;font-weight:bold}
+.numberRow div{display:inline-block;width:100px}.numberRow .columnHeader{text-align:center;font-size:32px;font-weight:bold}.letterRow div{display:inline-block;width:100px;height:100px;position:relative}.letterRow .text{position:absolute;left:20px;top:30px;font-size:32px;font-weight:bold}
 
 /*# sourceMappingURL=style.css.map */

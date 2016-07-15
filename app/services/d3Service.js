@@ -1,12 +1,10 @@
 angular.module('d3', [])
   .factory('d3Service', ['$document', '$q', '$rootScope',
     function($document, $q, $rootScope) {
-        console.log("hi0");
       var d = $q.defer();
       function onScriptLoad() {
         // Load client in the browser
         $rootScope.$apply(function() { d.resolve(window.d3); });
-          console.log("hi2");
       }
       // Create a script tag with d3 as the source
       // and call our onScriptLoad callback when it
@@ -17,7 +15,6 @@ angular.module('d3', [])
       scriptTag.src = 'http://d3js.org/d3.v3.min.js';
       scriptTag.onreadystatechange = function () {
         if (this.readyState == 'complete') onScriptLoad();
-          console.log("hi");
       }
       scriptTag.onload = onScriptLoad;
  

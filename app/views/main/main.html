@@ -9,11 +9,11 @@
             <div class="rowHeader">
                 <span class="text">{{letter}}</span>
             </div>
-            <div class="cell" id="{{letter}}{{number}}" ng-repeat="number in numbers">
-                <div class="well">
-                    <div circle></div>
+            <div class="cell" id="{{letter}}{{number}}" ng-repeat="number in numbers track by $index">
+                <div class="circleWrapper">
+                    <circle></circle>
                 </div>
-                <!--                <span class="text">{{letter}}{{number}}</span>-->
+<!--                <span class="text">{{letter}}{{number}}</span>-->
             </div>
         </div>
     </div>
